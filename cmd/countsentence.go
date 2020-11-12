@@ -17,6 +17,10 @@ var countSentenceCmd = &cobra.Command{
 	countsentence counts a god damm sentence
 	countsentence counts a god damm sentence`,
 	Run: func(cmd *cobra.Command, args []string) {
+		if len(args) < 1 {
+			fmt.Println("bad input dude")
+			return
+		}
 		fmt.Println(len(args[0]))
 	},
 }
